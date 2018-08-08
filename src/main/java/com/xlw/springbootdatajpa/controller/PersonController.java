@@ -121,8 +121,7 @@ public class PersonController {
     public List<Person> list() {
         Sort sort = new Sort(Sort.Direction.DESC, "name");
         System.out.println(sort.toString());
-        List<Person> all = personRepository.findAll();
-        return all;
+        return personRepository.findAll();
     }
 
     @RequestMapping("/delete/{name}")
